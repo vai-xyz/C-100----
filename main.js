@@ -9,7 +9,7 @@ recogniton.onresult=function(event){
     var Content=event.results[0][0].transcript;
     console.log(Content);
     document.getElementById("textbox").innerHTML=Content;
-    if (Content=="Selfie."){
+    if (Content=="Selfie"){
         console.log("taking selfie---")
         speak();
         speak_1();
@@ -18,12 +18,6 @@ recogniton.onresult=function(event){
 }
 
 
-function save(){
-    link=document.getElementById("link");
-    image=document.getElementById("selfie_image").src;
-    link.href=image;
-    link.click();
-}
 
 Webcam.set({
     width:500,
